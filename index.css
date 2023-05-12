@@ -1,0 +1,196 @@
+:root {
+    /* primary colors */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Light-red-background: rgba(255, 87, 87, 0.1);
+    --Orangey-yellow-background: rgba(255, 167, 87, 0.1);
+    --Green-teal-background: rgba(87, 167, 87, 0.1);
+    --Cobalt-blue-background: rgba(87, 87, 255, 0.1);
+
+    /* Gradients */
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle:  hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    --dark-shadow-accent: hsla(224, 30%, 27%, .3);
+}
+
+@font-face {
+    font-family: HankenGrotesk;
+    src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.summaryCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.summaryCard .summaryResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 370px;
+    width: 250px;
+    padding: 0.9em;
+    border-radius: 30px;
+    color: var(--White);
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background))
+}
+
+.resultTitle {
+    font-size: 15px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.rating {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(to bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.score {
+    margin-top: 35px;
+    font-size: 45px;
+}
+
+.scoreTotal {
+    position: relative;
+    top: -30px;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.description {
+    opacity: 0.7;
+}
+
+.summary {
+    height: 370px;
+    width: 250px;
+    padding: 0.9em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--White);
+    box-shadow: 1px 10px 20px var(--dark-shadow-accent);
+}
+
+.summaryReactionItem, .summaryMemoryItem, .summaryVerbalItem, .summaryVisualItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.summaryReactionItem {
+    background-color: var(--Light-red-background);
+}
+
+.summaryMemoryItem {
+    background-color: var(--Orangey-yellow-background);
+}
+
+.summaryVerbalItem {
+    background-color: var(--Green-teal-background);
+}
+
+.summaryVisualItem {
+    background-color: var(--Cobalt-blue-background);
+}
+
+.summaryReactionItem > .summaryItemTitleContainer > .summaryItemTitle {
+    color: var(--Light-red);
+}
+
+.summaryMemoryItem > .summaryItemTitleContainer > .summaryItemTitle {
+    color: var(--Orangey-yellow);
+}
+
+.summaryVerbalItem > .summaryItemTitleContainer > .summaryItemTitle {
+    color: var(--Green-teal);
+}
+
+.summaryVisualItem > .summaryItemTitleContainer > .summaryItemTitle {
+    color: var(--Cobalt-blue);
+}
+
+.summaryItemTitleContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.scoreResult {
+    font-weight: bold;
+}
+
+.scoreTotal {
+    opacity: 0.5;
+}
+
+.continueBtn {
+    width: 250px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    margin: 20px 0px;
+    color: var(--White);
+    background-color: var(--Dark-gray-blue);
+}
+
+.continueBtn:hover {
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+
+.continueBtn:active {
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none; 
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .summaryCard {
+        display: flex;
+        flex-direction: column;
+    }
+}
