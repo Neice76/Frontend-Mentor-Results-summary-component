@@ -41,6 +41,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: var(--White);
 }
 
 .summaryCard .summaryResults {
@@ -98,11 +99,13 @@ body {
     padding: 0.9em;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: var(--White);
     box-shadow: 1px 10px 20px var(--dark-shadow-accent);
 }
 
-.summaryReactionItem, .summaryMemoryItem, .summaryVerbalItem, .summaryVisualItem {
+.summaryReactionItem, 
+.summaryMemoryItem, 
+.summaryVerbalItem, 
+.summaryVisualItem {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,11 +151,22 @@ body {
     gap: 10px;
 }
 
+.summaryItemTitleContainer > .summaryIcon {
+    margin-left: 10px;
+}
+
+.summaryVisualItem > .summaryScore,
+.summaryVerbalItem > .summaryScore,
+.summaryMemoryItem > .summaryScore,
+.summaryReactionItem > .summaryScore {
+    margin-right: 5px;
+}
+
 .scoreResult {
     font-weight: bold;
 }
 
-.scoreTotal {
+.scoreTotal, .total {
     opacity: 0.5;
 }
 
@@ -163,13 +177,11 @@ body {
     border-radius: 30px;
     margin: 20px 0px;
     color: var(--White);
+    cursor: pointer;
     background-color: var(--Dark-gray-blue);
 }
 
-.continueBtn:hover {
-    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
-}
-
+.continueBtn:hover,
 .continueBtn:active {
     background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
 }
@@ -192,5 +204,11 @@ body {
     .summaryCard {
         display: flex;
         flex-direction: column;
+    }
+
+    .summary {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
     }
 }
